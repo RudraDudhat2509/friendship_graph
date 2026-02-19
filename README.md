@@ -19,7 +19,7 @@
 
 ---
 
-## 🧠 What This Project Does
+## What This Project Does
 
 Given a real dataset of friendships within a college classroom, this notebook constructs and analyzes a **social graph** to answer questions that no survey or spreadsheet could:
 
@@ -30,7 +30,7 @@ Given a real dataset of friendships within a college classroom, this notebook co
 
 ---
 
-## 📊 Key Findings at a Glance
+##  Key Findings at a Glance
 
 | Metric | Value | Interpretation |
 |---|---|---|
@@ -49,47 +49,47 @@ Given a real dataset of friendships within a college classroom, this notebook co
 Raw Excel Data
       │
       ▼
-🧹 Data Cleaning
+   Data Cleaning
   ├── Duplicate record removal (e.g., "Devanshu Sabhrawal" appeared 3×)
   └── Self-loop detection & elimination
       │
       ▼
-🕸️ Graph Construction (NetworkX)
+  Graph Construction (NetworkX)
   └── Undirected Graph G with all valid friendship edges
       │
       ▼
-📐 Centrality Analysis
+ Centrality Analysis
   ├── Degree Centrality     → Who knows the most people?
   ├── Betweenness Centrality → Who connects disparate groups?
   ├── Closeness Centrality  → Who spreads info fastest?
   └── PageRank              → Who is most "influential"?
       │
       ▼
-👥 Community Detection
+ Community Detection
   ├── Greedy Modularity (baseline)
   └── Girvan-Newman (divisive) → 5 distinct social circles identified
       │
       ▼
-🌉 Bridge Analysis
+ Bridge Analysis
   └── Cross-community edges that prevent network fragmentation
 ```
 
 ---
 
-## 🏆 Who Runs The Room? — Centrality Rankings
+##  Who Runs The Room? — Centrality Rankings
 
-### 🥇 Degree Centrality *(Most Popular)*
+### Degree Centrality *(Most Popular)*
 **ARUSH RANJAN** — directly connected to ~**57%** of the class. The drop-off to the next student (~40%) reveals a **centralized, hub-and-spoke** structure rather than a distributed one.
 
-### 🥇 Betweenness Centrality *(The Gatekeeper)*
+### Betweenness Centrality *(The Gatekeeper)*
 **SIDDHESH BANSAL** — despite not being the most popular, he sits on the shortest path between more pairs than anyone else. He is a **critical information broker** bridging distinct social circles.
 
-### 🥇 Closeness Centrality *(Fastest Information Spreader)*
+###  Closeness Centrality *(Fastest Information Spreader)*
 **ARUSH RANJAN & BANOTU SANTHOSH** — positioned at the geometric center of the graph. A rumor starting with them reaches everyone with the fewest hops.
 
 ---
 
-## 👥 Community Detection — 5 Distinct Social Circles
+## Community Detection — 5 Distinct Social Circles
 
 Using the **Girvan-Newman Divisive Clustering** algorithm (which outperformed Greedy Modularity for this dataset):
 
@@ -105,7 +105,7 @@ Using the **Girvan-Newman Divisive Clustering** algorithm (which outperformed Gr
 
 ---
 
-## 🌉 Network Bridges — The Students Who Hold It All Together
+##  Network Bridges — The Students Who Hold It All Together
 
 | Student | Function | Why It Matters |
 |---|---|---|
@@ -116,7 +116,7 @@ Using the **Girvan-Newman Divisive Clustering** algorithm (which outperformed Gr
 
 ---
 
-## ⚠️ Limitations & Critical Reflections
+##  Limitations & Critical Reflections
 
 This analysis acknowledges its own blind spots — because good data science always does:
 
@@ -127,7 +127,7 @@ This analysis acknowledges its own blind spots — because good data science alw
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Tool | Purpose |
 |---|---|
@@ -158,18 +158,18 @@ jupyter notebook friendshipgraph.ipynb
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
-📦 friendship-network-analysis
- ┣ 📓 friendshipgraph.ipynb     ← Main analysis notebook
- ┣ 📊 Friendship Network.xlsx   ← Source data (student friendship survey)
- └ 📄 README.md
+ friendship-network-analysis
+ ┣  friendshipgraph.ipynb     ← Main analysis notebook
+ ┣  data/Friendship Network.xlsx   ← Source data (student friendship survey)
+ └  README.md
 ```
 
 ---
 
-## 🔮 Future Scope
+##  Future Scope
 
 - [ ] Build a **directed graph** to model asymmetric friendships (A considers B a friend, but not vice versa)
 - [ ] Apply **temporal analysis** — how does the network change over a semester?
